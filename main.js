@@ -13,9 +13,6 @@ let teknik = document.getElementById("teknik")
 let sonucDiv = document.getElementById("sonucDiv")
 let sonucText = document.getElementById("sonucText")
 
-// let ddValue = Number(dogalDurum.value)
-// let altValue = Number(alternatif.value)
-// console.log(ddValue, altValue);
 button.addEventListener("click", (e) => {
     ddValue = Number(dogalDurum.value)
     altValue = Number(alternatif.value)
@@ -25,18 +22,14 @@ button.addEventListener("click", (e) => {
 
     tabloYap(altValue, ddValue, table)
 
-    //Burayı 29 kasım saat 00.50 de denemek için yazdım 
     function tabloYap(satir, sutun, table) {
         for (let i = 0; i < satir; i++) {
             let element = document.createElement("tr")
             for (let i = 0; i < sutun; i++) {
                 let element2 = document.createElement("td")
                 let element3 = document.createElement("input")
-                // element3.type="number"
-                element3.id = `${i}`
                 element2.appendChild(element3)
                 element.appendChild(element2);
-                element.id = `${i}`
                 table.appendChild(element)
             }
         }
@@ -69,11 +62,8 @@ hesaplaBtn.addEventListener("click", (e) => {
     let dizi2 = []
     let sayi = 0
     for (let i = 1; i <= altValue; i++) {
-        //  toplam=0
 
         for (let j = 0; j < ddValue; j++) {
-            // console.log(table.childNodes[i].childNodes[j].childNodes[0].value)
-            // toplam += Number(table.childNodes[i].childNodes[j].childNodes[0].value)
             sayi = Number(table.childNodes[i].childNodes[j].childNodes[0].value)
             dizi2.push(sayi)
             console.log(dizi2);
@@ -83,11 +73,9 @@ hesaplaBtn.addEventListener("click", (e) => {
         console.log(dizi1);
         dizi2 = []
 
-        //  console.log(dizi1);
 
     }
 
-    // console.log("Toplam:" + toplam);
 
     console.log(dizi1[0][0]);
 
@@ -140,7 +128,6 @@ function iyimser(dizi) {
             if (enBuyuk > enBuyukDeger) {
                 enBuyukDeger = enBuyuk
                 enBuyukSatir = i
-                // b = i;
             }
         }
         enBuyukler.push(enBuyuk)
@@ -152,27 +139,15 @@ function iyimser(dizi) {
     for (let i = 0; i < altValue; i++) {
         table2.childNodes[i + 1].childNodes[0].childNodes[0].value = enBuyukler[i]
     }
-    // let yeniDizi = enBuyukler.sort((x, y) => y - x)
 
     sonucDiv.style.display = "flex"
-    // sonucText.textContent=`Verilen iyimser karar : ${yeniDizi[0]}`
 
-    // let sonuc = tableLeft.childNodes[b + 1].childNodes[0].childNodes[0].value
-
-    //deneme alt satır
     let sonuc2 = tableLeft.childNodes[enBuyukSatir + 1].childNodes[0].childNodes[0].value
-
-
-
-    // console.log(sonuc);
     console.log(" En buyuk satir :" + Number(enBuyukSatir));
-    // sonucText.textContent = `Verilen iyimser karar : ${sonuc}`
-
-    // console.log('a', a)
+  
     console.log("enbuyuk", enBuyukDeger)
     sonucText.textContent = `Verilen iyimser karar yeni  : ${sonuc2}`
 
-    // console.log(b)
 }
 
 
@@ -202,27 +177,16 @@ function iyimserM(dizi) {
     for (let i = 0; i < altValue; i++) {
         table2.childNodes[i + 1].childNodes[0].childNodes[0].value = enKucukler[i]
     }
-    // let yeniDizi = enBuyukler.sort((x, y) => y - x)
-
     sonucDiv.style.display = "flex"
-    // sonucText.textContent=`Verilen iyimser karar : ${yeniDizi[0]}`
 
-    // let sonuc = tableLeft.childNodes[b + 1].childNodes[0].childNodes[0].value
-
-    //deneme alt satır
     let sonuc2 = tableLeft.childNodes[enKucukSatir + 1].childNodes[0].childNodes[0].value
 
 
 
-    // console.log(sonuc);
     console.log(" En kucuk satir :" + Number(enKucukSatir));
-    // sonucText.textContent = `Verilen iyimser karar : ${sonuc}`
-
-    // console.log('a', a)
     console.log("enKucuk", enKucukDeger)
     sonucText.textContent = `Verilen iyimser karar yeni  : ${sonuc2}`
 
-    // console.log(b)
 }
 
 
@@ -255,9 +219,6 @@ function kotumser(dizi) {
 
     let sonuc2 = tableLeft.childNodes[sonucSatir + 1].childNodes[0].childNodes[0].value
 
-    // let yeniDizi = enKucukler.sort().reverse()
-    // console.log(yeniDizi);
-    // console.log("Verilen kötümser karar :" + yeniDizi[0]);
     sonucDiv.style.display = "flex"
     sonucText.textContent = `Verilen kötümser karar : ${sonuc2}`
     return enKucuklerinEnBuyugu
@@ -276,11 +237,7 @@ function kotumserM(dizi) {
             if (dizi[i][j] >= enBuyuk) {
                 enBuyuk = dizi[i][j]
             }
-            // if (enBuyuk > enBuyukDeger) {
-            //     enBuyukDeger = enBuyuk
-            //     enBuyukSatir = i
-            //     // b = i;
-            // }
+       
         }
         enBuyukler.push(enBuyuk)
 
