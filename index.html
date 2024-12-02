@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="inputs-wrapper">
+            <div class="inputs"> <label for="teknik"> Hangi karar verme tekniğini kullanmak istersiniz  :</label>
+                <select name="teknik" id="teknik">
+                 <option value="iyimser">İyimser</option>
+                 <option value="kotumser">Kötümser </option>
+                 <option value="hurwics">Hurwics </option>
+
+                </select> </div>
+            <div class="inputs"> <label for="dogalDurum">Dogal Durum Sayısını giriniz :</label><input type="number"
+                    id="dogalDurum" class="topInputs"></div>
+            <div class="inputs"> <label for="alternatif">Alternatif Sayısını giriniz :</label><input type="number"
+                    id="alternatif" class="topInputs"> </div>
+                    <div class="inputs"> <label for="maliyet"> Problem Maliyet Yapılı Mı :</label>
+                       <select name="maliyet" id="maliyet">
+                        <option value="false">Maliyet yapılı değil</option>
+                        <option value="true">Maliyet yapılı </option>
+                       </select> </div>
+                       <div class="inputs"> <label for="hurwics">Alfa Değerini giriniz :</label><input type="number"
+                        id="hurwics" class="topInputs"> </div>
+                    <!-- <div class="inputs">
+                        <select name="tur" id="kararTuru">
+                            <option value="iyimser">İyimserlik</option>
+                            <option value="kotumser">Kotumser</option>
+                            <option value="iyimser">Es Olasılık</option>
+                            <option value="hurwic">Hurwics</option>
+                            <option value="pismanlik">Pismanlik</option>
+
+                        </select>
+                    </div> -->
+            <div class="button-div">
+                <button id="button" type="button" class="button-div-btn">Tablo oluştur</button>
+            </div>
+        </div>
+        <div class="tables">
+
+
+            <div class="ust-tablo">
+                <div class="tables4">
+                    <table id="table4" border="1px">
+
+                    </table>
+                </div>
+
+            </div>
+
+             <div class="tablolar">  
+            <div class="table-wrapper-3">
+                <div class="tables3">
+                    <table id="tableLeft" border="1px">
+
+                    </table>
+                </div>
+            </div>
+            <div class="table-wrapper">
+                <div class="tables1">
+                    <table id="table" border="1px">
+
+                    </table>
+                </div>
+            </div>
+
+            <div class="table-wrapper-2">
+                <div class="tables2">
+                    <table id="table2" border="1px">
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <button type="button" id="hesaplaBtn" class="hesaplaBtn">Hesapla</button>
+       <div class="sonuc-div" id="sonucDiv"> <p class="sonucText" id="sonucText">Karar verme sonucu:</p> </div> 
+    </div>
+
+
+
+    <script src="main.js"></script>
+
+</body>
+</html>
